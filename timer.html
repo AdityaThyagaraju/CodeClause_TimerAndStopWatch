@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer&Stopwatch</title>
+    <link rel="stylesheet" href="static/styles/styles.css">
+    <script src="https://kit.fontawesome.com/04a46b921a.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="static/script/timer.js"></script>
+</head>
+
+<body>
+    <div class="modal-bg none" onclick="closeModal()"></div>
+    <div class="modal none">
+        <div class="modal-header">
+            <h2>Edit Timer</h2>
+            <button class="term" onclick="closeModal()" style="cursor: pointer;">&times;</button>
+        </div>
+        <div class="modal-body">
+            <div class="time-setting">
+                <div class="time-input">
+                    <input id="hrs" type="number" value=00 max=24 onchange="leadingZeroes(this)" />
+                    <span>Hrs</span>
+                </div>
+                <span>:</span>
+                <div class="time-input">
+                    <input id="mins" type="number" value=02 max=60 onchange="leadingZeroes(this)" />
+                    <span>Mins</span>
+                </div>
+                <span>:</span>
+                <div class="time-input">
+                    <input id="secs" type="number" value=00 max=60 onchange="leadingZeroes(this)" />
+                    <span>Secs</span>
+                </div>
+            </div>
+            <hr>
+            <div>Timer name</div>
+            <input id="timer-name" type="text" />
+            <button class="done-btn" onclick="setTimer(this)">Done</button>
+        </div>
+    </div>
+    <div id="tab">
+        <button id="timer-tab-btn" class="tab-btn" onclick="timerTab()">Timer</button>
+        <button id="stopwatch-tab-btn" class="tab-btn" onclick="stopWatchTab()">Stopwatch</button>
+    </div>
+    <div class="timerTab">
+        <div class="timers-wrapper">
+            <div id=1 class="timer">
+                <div class="display">
+                    <span>00:02:00</span>
+                    <button class="control dark" value=1 onclick="start()">start</button>
+                    <button class="control light" value=1 onclick="reset(this.value)">reset</button>
+                    <button value=1 class="remove" onclick="removeTimer()">&times; remove</button>
+                </div>
+                <div class="timer-operation">
+                    <div class="timer-info">
+                        <span class="timer-name">Timer1 (00:02:00)</span>
+                        <button class="edit-timer" value=1 onclick="openModal()"><i class="fa-solid fa-pen"></i>
+                            Edit</button>
+                    </div>
+                    <div class="time-bar">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <pre onclick="addTimer()">+   Add another timer</pre>
+    </div>
+
+    <!-- stopwatch -->
+
+
+    <div class="stopWatchTab" style="display: none;">
+        <span id="stp-time" class="stp-time">00:00:00.0<span class="millisec">00</span></span>
+        <br />
+        <br />
+        <span id="millistp" class="millisec millistp">00:00:00.000</span>
+        <br />
+        <br />
+        <button id="start-btn-var" class="stp-btn start-btn-var" onclick="startStp(this)">Start</button>
+        <button id="split-btn-var" class="stp-btn">Split</button>
+        <button id="rst-btn-var" class="stp-btn">Reset</button>
+        <br />
+        <br />
+        <table id="stp-table">
+
+        </table>
+    </div>
+</body>
+
+</html>

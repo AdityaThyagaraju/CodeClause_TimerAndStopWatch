@@ -1,0 +1,255 @@
+.modal-bg {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+  max-width: 400px;
+  overflow: hidden;
+  padding-bottom: 5px;
+  transform: translateX(50%) translateY(50%);
+}
+
+.modal-header {
+  padding: 2%;
+  background-color: rgb(126, 7, 238);
+  margin-bottom: 1rem;
+}
+
+.modal-body {
+  padding: 5%;
+}
+
+.modal-header h2 {
+  display: inline;
+  width: fit-content;
+}
+
+.modal-header button {
+  background-color: transparent;
+  font-size: 2rem;
+  color: white;
+  border: none;
+  float: right;
+}
+
+body {
+  width: 100vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+#tab {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+  background-color: darkgray;
+  padding: 2%;
+  padding-bottom: 0px;
+  width: 100%;
+}
+
+.tab-btn {
+  background: darkgray;
+  padding: 0%;
+  font-size: large;
+  border: none;
+  border-bottom: solid 1rem;
+  border-color: darkgray;
+  cursor: pointer;
+}
+
+#timer-tab-btn {
+  border-color: rgb(46, 241, 231);
+}
+
+.timerTab,
+.stopWatchTab {
+  padding: 30px;
+}
+
+.display {
+  display: flex;
+  justify-content: start;
+  font-size: 3rem;
+  gap: 50px;
+}
+
+.control {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: large;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: rgb(46, 241, 231);
+  color: aliceblue;
+  border: none;
+}
+
+.light {
+  background-color: ghostwhite;
+  border: solid 2px grey;
+  color: grey;
+}
+
+.remove {
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  color: red;
+}
+
+.timer {
+  margin-bottom: 2rem;
+}
+
+.timer-operation {
+  border: solid 2px grey;
+  margin-top: 1.5rem;
+}
+
+.timer-info {
+  display: flex;
+  justify-content: start;
+  font-size: large;
+  padding: 5px;
+  gap: 4rem;
+}
+
+.edit-timer {
+  cursor: pointer;
+  padding: 0px;
+  border: none;
+  background-color: white;
+  color: rgb(126, 7, 238);
+}
+
+.time-bar {
+  width: 100%;
+  margin-top: 3px;
+  height: 2rem;
+  background: rgb(46, 241, 231);
+  overflow: hidden;
+}
+
+.bar {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(254, 96, 149);
+}
+
+pre {
+  cursor: pointer;
+  color: rgb(126, 7, 238);
+  font-size: larger;
+}
+
+.time-setting {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.time-setting span {
+  font-size: 2rem;
+}
+
+.time-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.time-input input {
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+  border-color: grey;
+  width: 4rem;
+  height: 2rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+hr {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.done-btn {
+  cursor: pointer;
+  background-color: greenyellow;
+  float: right;
+  color: rgb(27, 80, 3);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.none {
+  display: none;
+}
+
+/* ///////////////////////////////////stopwatch////////////////// */
+
+.stp-time {
+  font-size: 80px;
+}
+.millisec {
+  font-size: 30px;
+}
+.millistp {
+  color: rgb(241, 188, 108);
+}
+.stp-btn {
+  display: inline-block;
+  margin: 2%;
+  height: 120px;
+  width: 120px;
+  border: none;
+  border-radius: 100%;
+  font-size: 30px;
+  transition: all 0.5s;
+  cursor: not-allowed;
+}
+.stp-btn:hover {
+  color: white;
+  background-color: black;
+}
+.start-btn-var {
+  background-color: aqua;
+  cursor: pointer;
+}
+.split-btn-var {
+  background-color: rgb(255, 219, 75);
+  cursor: pointer;
+}
+.rst-btn-var {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-data {
+  font-size: 2em;
+  border-style: solid none;
+  border-color: rgb(211, 211, 211);
+  border-width: 2px;
+  border-collapse: collapse;
+  margin: 2%;
+  padding: 2%;
+}
