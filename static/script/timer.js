@@ -66,7 +66,7 @@ function addTimer() {
         <div class="display">
             <span>00:02:00</span>
             <button class="control dark" value=${noOfTimers} onclick="start()">start</button>
-            <button class="control light" value=${noOfTimers} onclick="reset()">reset</button>
+            <button class="control light" value=${noOfTimers} onclick="reset(this.value)">reset</button>
             <button value=${noOfTimers} class="remove" onclick="removeTimer()">&times; remove</button>
         </div>
         <div class="timer-operation">
@@ -120,12 +120,12 @@ function setTimer(el) {
   clocks[index][0] = time;
   clocks[index].push(0);
   changeDisplayTime(index, shrs, smins, ssecs);
-  $(`#${index} .timer-name`).html(
-    `${timerData[index].name} ${shrs}:${smins}:${ssecs}`
-  );
   if (timerName != "") {
     timerData[index].name = timerName;
   }
+  $(`#${index} .timer-name`).html(
+    `${timerData[index].name} ${shrs}:${smins}:${ssecs}`
+  );
   closeModal();
 }
 
